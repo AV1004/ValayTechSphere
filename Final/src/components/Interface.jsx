@@ -5,10 +5,12 @@ import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
 
 const Section = (props) => {
-  const { children } = props;
+  const { children, mobileTop } = props;
   return (
     <motion.section
-      className="h-screen w-screen p-8 max-w-screen-2xl mx-auto flex flex-col items-start justify-center"
+      className={`h-screen w-screen p-8 max-w-screen-2xl mx-auto flex flex-col items-start  ${
+        mobileTop ? "justify-start md:justify-center" : "justify-center"
+      }`}
       initial={{
         opacity: 0,
         y: 50,
@@ -40,16 +42,16 @@ export const Interface = ({ onSectionChange }) => {
 
 const AboutSection = ({ onSectionChange }) => {
   return (
-    <Section>
-      <h1 className="text-6xl font-extrabold leading-snug text-[#1F4E79]">
+    <Section mobileTop>
+      <h1 className=" text-4xl md:text-5xl    font-extrabold leading-snug text-[#1F4E79] md:mt-0">
         Hi, I'm
         <br />
-        <span className="bg-[#1F4E79] text-white px-1 italic">
+        <span className="bg-[#1F4E79] text-white px-1 text-4xl  italic">
           Valay Andhariya
         </span>
       </h1>
       <motion.p
-        className="text-lg text-gray-600 mt-4"
+        className="text-md text-gray-600 mt-4"
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.5 }}
@@ -123,7 +125,7 @@ const SkillsSection = () => {
   return (
     <Section>
       <motion.div whileInView={"visible"}>
-        <h2 className="text-5xl font-bold text-white">Skills</h2>
+        <h2 className=" text-3xl md:text-5xl font-bold text-white">Skills</h2>
         <div className="mt-8 space-y-4">
           {skills.map((skill, index) => {
             return (
@@ -159,7 +161,7 @@ const SkillsSection = () => {
         </div>
       </motion.div>
       <motion.div className="mt-10" whileInView={"visible"}>
-        <h2 className="text-5xl font-bold text-white">Languages</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-white">Languages</h2>
         <div className="mt-8 space-y-4 text-white">
           {Languages.map((lang, index) => {
             return (
@@ -218,7 +220,7 @@ const ProjectsSection = () => {
         >
           ← Previous
         </button>
-        <h2 className="text-5xl font-bold">Projects</h2>
+        <h2 className="text-3xl md:text-5xl font-bold">Projects</h2>
         <button
           className="hover:text-white transition-colors"
           onClick={nextProject}
@@ -233,7 +235,7 @@ const ProjectsSection = () => {
 const ContactSection = () => {
   return (
     <Section>
-      <h2 className="text-5xl font-bold">Contact me</h2>
+      <h2 className="text-3xl md:text-5xl font-bold">Contact me</h2>
       <div className="mt-8 p-8 rounded-md bg-[#1F4E79]  w-96 max-w-full">
         <form>
           <label htmlFor="name" className="font-medium text-white  block mb-1">

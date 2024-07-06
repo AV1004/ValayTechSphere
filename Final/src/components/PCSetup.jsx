@@ -4,12 +4,14 @@ Command: npx gltfjsx@6.2.18 .\public\models\PCSetup.glb -k
 */
 
 import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 import { motion } from "framer-motion-3d";
 
 export function PCSetup(props) {
   const { section } = props;
   const { nodes, materials } = useGLTF("models/PCSetup.glb");
+  const textureCodeScreen = useTexture("images/CodeWithScreen.png");
+
   return (
     <group {...props} dispose={null}>
       <group
@@ -45,14 +47,16 @@ export function PCSetup(props) {
         />
       </group>
 
-      
-      <mesh
+      <motion.mesh
         name="Monitor"
         geometry={nodes.Monitor.geometry}
         material={materials.Mat}
         position={[0.224, 0.788, -1.718]}
         rotation={[0, 1.438, 0]}
-        scale={0.007}
+        scale={[0, 0, 0]}
+        animate={{
+          scale: section === 0 ? 0.007 : 0,
+        }}
       />
       <mesh
         name="Keyboard"
@@ -112,11 +116,14 @@ export function PCSetup(props) {
           material={materials.blinn5SG}
         />
       </group>
-      <group
+      <motion.group
         name="group173738516"
         position={[-0.108, 0.25, -0.808]}
         rotation={[-Math.PI, 0.289, -Math.PI]}
-        scale={0.681}
+        scale={[0, 0, 0]}
+        animate={{
+          scale: section === 0 ? 0.681 : 0,
+        }}
       >
         <mesh
           name="mesh173738516"
@@ -138,15 +145,20 @@ export function PCSetup(props) {
           geometry={nodes.mesh173738516_3.geometry}
           material={materials["mat23.001"]}
         />
-      </group>
-      <mesh
+      </motion.group>
+      <motion.mesh
         name="Monitor001"
         geometry={nodes.Monitor001.geometry}
         material={materials.Mat}
         position={[0.224, 0.788, -1.718]}
         rotation={[0, 1.438, 0]}
-        scale={0.007}
-      />
+        scale={[0, 0, 0]}
+        animate={{
+          scale: section === 0 ? 0.007 : 0,
+        }}
+      >
+        <meshBasicMaterial map={textureCodeScreen} toneMapped={false} />
+      </motion.mesh>
     </group>
   );
 }
