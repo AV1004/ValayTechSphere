@@ -124,14 +124,14 @@ const Languages = [
 const SkillsSection = () => {
   return (
     <Section>
-      <motion.div whileInView={"visible"}>
+      <motion.div className="w-full" whileInView={"visible"}>
         <h2 className=" text-3xl md:text-5xl font-bold text-white">Skills</h2>
         <div className="mt-8 space-y-4">
           {skills.map((skill, index) => {
             return (
-              <div className="w-64 text-white" key={index}>
+              <div className=" w-full md:w-64 text-white" key={index}>
                 <motion.h3
-                  className="text-xl font-bold  text-white"
+                  className=" text-lg md:text-xl font-bold  text-white"
                   initial={{ opacity: 0 }}
                   variants={{
                     visible: {
@@ -160,14 +160,14 @@ const SkillsSection = () => {
           })}
         </div>
       </motion.div>
-      <motion.div className="mt-10" whileInView={"visible"}>
+      <motion.div className="mt-10 w-full" whileInView={"visible"}>
         <h2 className="text-3xl md:text-5xl font-bold text-white">Languages</h2>
-        <div className="mt-8 space-y-4 text-white">
+        <div className="mt-8  space-y-4 text-white">
           {Languages.map((lang, index) => {
             return (
-              <div className="w-64" key={index}>
+              <div className="w-full md:w-64" key={index}>
                 <motion.h3
-                  className="text-xl font-bold text-white"
+                  className="text-lg md:text-xl font-bold text-white"
                   initial={{ opacity: 0 }}
                   variants={{
                     visible: {
@@ -236,7 +236,7 @@ const ContactSection = () => {
   return (
     <Section>
       <h2 className="text-3xl md:text-5xl font-bold">Contact me</h2>
-      <div className="mt-8 p-8 rounded-md bg-[#1F4E79]  w-96 max-w-full">
+      <div className="mt-8 p-8 rounded-md bg-[#1F4E79] bg-opacity-50 md:bg-opacity-100  w-96 max-w-full">
         <form>
           <label htmlFor="name" className="font-medium text-white  block mb-1">
             Name

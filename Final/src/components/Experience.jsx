@@ -20,6 +20,8 @@ export const Experience = ({ menuOpened }) => {
   const { viewport } = useThree();
   const data = useScroll();
 
+  console.log(viewport.width, viewport.height);
+
   const [section, setSection] = useState(0);
 
   const cameraPositionX = useMotionValue();
@@ -112,7 +114,7 @@ export const Experience = ({ menuOpened }) => {
           },
         }}
       >
-        <Avatar animation={characterAnimation} />
+        <Avatar animation={characterAnimation} wireframe={section === 1} />
       </motion.group>
       <ambientLight intensity={1} />
       <motion.group
