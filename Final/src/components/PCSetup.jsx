@@ -44,6 +44,8 @@ export function PCSetup(props) {
           material={materials.BlackPlastic}
         />
       </group>
+
+      
       <mesh
         name="Monitor"
         geometry={nodes.Monitor.geometry}
