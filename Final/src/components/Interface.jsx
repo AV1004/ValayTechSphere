@@ -123,13 +123,13 @@ const SkillsSection = () => {
   return (
     <Section>
       <motion.div whileInView={"visible"}>
-        <h2 className="text-5xl font-bold">Skills</h2>
+        <h2 className="text-5xl font-bold text-white">Skills</h2>
         <div className="mt-8 space-y-4">
           {skills.map((skill, index) => {
             return (
-              <div className="w-64" key={index}>
+              <div className="w-64 text-white" key={index}>
                 <motion.h3
-                  className="text-xl font-bold text-gray-800"
+                  className="text-xl font-bold  text-white"
                   initial={{ opacity: 0 }}
                   variants={{
                     visible: {
@@ -142,7 +142,7 @@ const SkillsSection = () => {
                 </motion.h3>
                 <div className="h-2 w-full bg-white rounded-full mt-2">
                   <motion.div
-                    className="h-full bg-[#1F4E79]  rounded-full "
+                    className="h-full bg-[#1F4E7A]  rounded-full "
                     style={{ width: `${skill.level}%` }}
                     initial={{ scaleX: 0, originX: 0 }}
                     variants={{
@@ -159,13 +159,13 @@ const SkillsSection = () => {
         </div>
       </motion.div>
       <motion.div className="mt-10" whileInView={"visible"}>
-        <h2 className="text-5xl font-bold">Languages</h2>
-        <div className="mt-8 space-y-4">
+        <h2 className="text-5xl font-bold text-white">Languages</h2>
+        <div className="mt-8 space-y-4 text-white">
           {Languages.map((lang, index) => {
             return (
               <div className="w-64" key={index}>
                 <motion.h3
-                  className="text-xl font-bold text-gray-800"
+                  className="text-xl font-bold text-white"
                   initial={{ opacity: 0 }}
                   variants={{
                     visible: {
@@ -213,14 +213,14 @@ const ProjectsSection = () => {
     <Section>
       <div className="flex w-full h-full gap-8 items-center justify-center mt-60">
         <button
-          className="hover:text-indigo-600 transition-colors"
+          className="hover:text-white transition-colors"
           onClick={previousProject}
         >
           ← Previous
         </button>
         <h2 className="text-5xl font-bold">Projects</h2>
         <button
-          className="hover:text-indigo-600 transition-colors"
+          className="hover:text-white transition-colors"
           onClick={nextProject}
         >
           Next →

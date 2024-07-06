@@ -14,6 +14,7 @@ import { useEffect, useRef, useState } from "react";
 import { framerMotionConfig } from "../config";
 import * as THREE from "three";
 import { Projects } from "./Projects";
+import { Background } from "./Background";
 
 export const Experience = ({ menuOpened }) => {
   const { viewport } = useThree();
@@ -71,6 +72,7 @@ export const Experience = ({ menuOpened }) => {
   return (
     <>
       {/* <OrbitControls /> */}
+      <Background />
       <motion.group
         position={[1.945477272147525, 0.09000000000000001, 2.4272435072388965]}
         rotation={[-3.141592653589793, 1.2053981633974482, 3.141592653589793]}
