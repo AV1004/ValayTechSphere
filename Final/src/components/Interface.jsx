@@ -1,6 +1,8 @@
 import React from "react";
 import { div } from "three/examples/jsm/nodes/Nodes.js";
 import { motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { currentProjectAtom, projects } from "./Projects";
 
 const Section = (props) => {
   const { children } = props;
@@ -30,9 +32,7 @@ export const Interface = ({ onSectionChange }) => {
     <div className="flex flex-col items-center w-screen">
       <AboutSection onSectionChange={onSectionChange} />
       <SkillsSection />
-      <Section>
-        <h1>Projects</h1>
-      </Section>
+      <ProjectsSection />
       <ContactSection />
     </div>
   );
@@ -194,6 +194,38 @@ const SkillsSection = () => {
           })}
         </div>
       </motion.div>
+    </Section>
+  );
+};
+
+const ProjectsSection = () => {
+  const [currentProject, setCurrentProject] = useAtom(currentProjectAtom);
+
+  const nextProject = () => {
+    setCurrentProject((currentProject + 1) % projects.length);
+  };
+
+  const previousProject = () => {
+    setCurrentProject((currentProject - 1 + projects.length) % projects.length);
+  };
+
+  return (
+    <Section>
+      <div className="flex w-full h-full gap-8 items-center justify-center mt-60">
+        <button
+          className="hover:text-indigo-600 transition-colors"
+          onClick={previousProject}
+        >
+          ← Previous
+        </button>
+        <h2 className="text-5xl font-bold">Projects</h2>
+        <button
+          className="hover:text-indigo-600 transition-colors"
+          onClick={nextProject}
+        >
+          Next →
+        </button>
+      </div>
     </Section>
   );
 };
