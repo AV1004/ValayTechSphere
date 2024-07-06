@@ -5,11 +5,9 @@ Command: npx gltfjsx@6.2.18 .\public\models\PCSetup.glb -k
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import { motion } from "framer-motion-3d";
 
-export function PCSetup(props) {
-  const { section } = props;
-  const { nodes, materials } = useGLTF("models/PCSetup.glb");
+export function Model(props) {
+  const { nodes, materials } = useGLTF("/PCSetup.glb");
   return (
     <group {...props} dispose={null}>
       <group
@@ -149,4 +147,4 @@ export function PCSetup(props) {
   );
 }
 
-useGLTF.preload("models/PCSetup.glb");
+useGLTF.preload("/PCSetup.glb");

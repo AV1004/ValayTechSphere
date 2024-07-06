@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const CURSOR_SPEED = 0.08;
+const CURSOR_SPEED = 0.09;
 
 let mouseX = 0;
 let mouseY = 0;
@@ -64,7 +64,7 @@ export const Cursor = () => {
   return (
     <>
       <div
-        className={`z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform
+        className={`z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform w-4 h-4
         ${
           hoverButton
             ? "bg-transparent border-2 border-indigo-900 w-5 h-5"

@@ -15,8 +15,8 @@ export const Office = ({ section }) => {
       <WallFloor />
       <Window />
       <FlowerPort section={section} />
-      <Frame1 />
-      <Frame2 />
+      {/* <Frame1 />
+      <Frame2 /> */}
       <Shelf section={section} />
       <Rug section={section} />
       <Globe section={section} />
