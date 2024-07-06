@@ -25,10 +25,10 @@ const Section = (props) => {
   );
 };
 
-export const Interface = () => {
+export const Interface = ({ onSectionChange }) => {
   return (
     <div className="flex flex-col items-center w-screen">
-      <AboutSection />
+      <AboutSection onSectionChange={onSectionChange} />
       <SkillsSection />
       <Section>
         <h1>Projects</h1>
@@ -38,7 +38,7 @@ export const Interface = () => {
   );
 };
 
-const AboutSection = () => {
+const AboutSection = ({ onSectionChange }) => {
   return (
     <Section>
       <h1 className="text-6xl font-extrabold leading-snug text-[#1F4E79]">
@@ -65,6 +65,7 @@ const AboutSection = () => {
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 2 }}
+        onClick={() => onSectionChange(3)}
       >
         Contact me
       </motion.button>
