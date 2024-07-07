@@ -7,13 +7,13 @@ import { atom, useAtom } from "jotai";
 
 export const projects = [
   {
-    title: "Expense Calculator",
+    title: "Expense",
     url: "https://av1004.github.io/Expense_Tracker_Web_App/",
     image: "projects/expenses.png",
     description: "Use to track your daily expenses.",
   },
   {
-    title: "Investment Calcultor",
+    title: "Investment",
     url: "https://av1004.github.io/Investment_Calculator/",
     image: "projects/investment.png",
     description:
@@ -58,7 +58,7 @@ export const projects = [
   },
   {
     title: "TechSphere",
-    url: "https://social-events-portalfrontend-kucmphkr9.vercel.app/",
+    url: "https://valay-tech-sphere.vercel.app/",
     image: "projects/ValayTechS.png",
     description: "A 3D portfolio",
   },
