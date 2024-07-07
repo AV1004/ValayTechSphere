@@ -115,20 +115,20 @@ const skills = [
   },
 ];
 
-const Languages = [
-  {
-    title: "English",
-    level: 80,
-  },
-  {
-    title: "Hindi",
-    level: 90,
-  },
-  {
-    title: "Gujarati",
-    level: 100,
-  },
-];
+// const Languages = [
+//   {
+//     title: "English",
+//     level: 80,
+//   },
+//   {
+//     title: "Hindi",
+//     level: 90,
+//   },
+//   {
+//     title: "Gujarati",
+//     level: 100,
+//   },
+// ];
 
 const SkillsSection = () => {
   return (
@@ -169,7 +169,7 @@ const SkillsSection = () => {
           })}
         </div>
       </motion.div>
-      <motion.div className="mt-10 w-full" whileInView={"visible"}>
+      {/* <motion.div className="mt-10 w-full" whileInView={"visible"}>
         <h2 className="text-3xl md:text-5xl font-bold text-white">Languages</h2>
         <div className="mt-8  space-y-4 text-white">
           {Languages.map((lang, index) => {
@@ -204,7 +204,7 @@ const SkillsSection = () => {
             );
           })}
         </div>
-      </motion.div>
+      </motion.div> */}
     </Section>
   );
 };
