@@ -105,6 +105,14 @@ const skills = [
     title: "React Three Fiber",
     level: 40,
   },
+  {
+    title: "c++",
+    level: 50,
+  },
+  {
+    title: "Git/Github",
+    level: 60,
+  },
 ];
 
 const Languages = [

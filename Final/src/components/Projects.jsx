@@ -7,28 +7,72 @@ import { atom, useAtom } from "jotai";
 
 export const projects = [
   {
-    title: "Project1",
-    url: "https://google.com",
-    image: "projects/metaverse.jpg",
-    description: "ABCD ABCD ABCD",
+    title: "Expense Calculator",
+    url: "https://av1004.github.io/Expense_Tracker_Web_App/",
+    image: "projects/expenses.png",
+    description: "Use to track your daily expenses.",
   },
   {
-    title: "Project1",
-    url: "https://google.com",
-    image: "projects/metaverse.jpg",
-    description: "ABCD ABCD ABCD",
+    title: "Investment Calcultor",
+    url: "https://av1004.github.io/Investment_Calculator/",
+    image: "projects/investment.png",
+    description:
+      "Basic Investment Calculator that can help you in your next investment.",
   },
   {
-    title: "Project1",
-    url: "https://google.com",
-    image: "projects/metaverse.jpg",
-    description: "ABCD ABCD ABCD",
+    title: "React Quiz",
+    url: "https://av1004.github.io/Quiz_App/",
+    image: "projects/reactQuiz.png",
+    description: "A React Quiz bulid to practice Hooks of React.",
   },
   {
-    title: "Project1",
-    url: "https://google.com",
+    title: "React Food",
+    url: "https://react-food-frontend.vercel.app/",
+    image: "projects/reactFood.png",
+    description: "A Web app bulid using redux.",
+  },
+  {
+    title: "Dare Yourself",
+    url: "https://challenge-your-self.vercel.app/",
+    image: "projects/challengeYS.png",
+    description:
+      "Created ”Challenge Yourself” web app using React.js and Framer Motion for interactive animations",
+  },
+  {
+    title: "UPI Banking",
+    url: "https://xyz-banking.vercel.app/",
+    image: "projects/upiBanking.png",
+    description: "Developed a dummy UPI banking Web App.",
+  },
+  {
+    title: "Urban Utopia",
+    url: "https://uraban-utopia.onrender.com/",
+    image: "projects/urbanUtopia.png",
+    description: "An Ecommerce Website bulid by NodeJS.",
+  },
+  {
+    title: "React Events",
+    url: "https://social-events-portalfrontend-kucmphkr9.vercel.app/",
+    image: "projects/socialEvents.png",
+    description: "A social platform for managing social events.",
+  },
+  {
+    title: "TechSphere",
+    url: "https://social-events-portalfrontend-kucmphkr9.vercel.app/",
+    image: "projects/ValayTechS.png",
+    description: "A 3D portfolio",
+  },
+  {
+    title: "Cherry Explorer",
+    url: "https://cherry-fields-explorer.vercel.app/",
     image: "projects/metaverse.jpg",
-    description: "ABCD ABCD ABCD",
+    description: "3D Metaverse Web App",
+  },
+  {
+    title: "Solar System",
+    url: "https://av1004.github.io/SolarSystemFromR3F/",
+    image: "projects/solarSystem.png",
+    description: "3D Solar System using React Three Fiber.",
   },
 ];
 
