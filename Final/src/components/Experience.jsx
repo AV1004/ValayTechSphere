@@ -146,6 +146,9 @@ export const Experience = ({ menuOpened }) => {
         animate={{
           y: isMoblie ? -viewport.height / 6 : 0,
         }}
+        transition={{
+          duration: 0.8,
+        }}
       >
         <Office section={section} />
         <group
