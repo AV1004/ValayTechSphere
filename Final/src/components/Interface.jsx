@@ -1,9 +1,10 @@
 import React from "react";
-import { div } from "three/examples/jsm/nodes/Nodes.js";
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
 import { useForm, ValidationError } from "@formspree/react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 const Section = (props) => {
   const { children, mobileTop } = props;
@@ -70,7 +71,7 @@ const AboutSection = ({ onSectionChange }) => {
         transition={{ duration: 1, delay: 2 }}
         onClick={() => onSectionChange(3)}
       >
-        Contact me
+        Get in touch
       </motion.button>
     </Section>
   );
@@ -302,8 +303,22 @@ const ContactSection = () => {
               className="mt-1 text-white"
               errors={state.errors}
             />
+            <div className="flex gap-5 mt-10">
+              <a
+                href="https://www.linkedin.com/in/valay-andhariya-753104248/"
+                target="_blank"
+              >
+                <FaLinkedin size={30} color="white" />
+              </a>
+              <a href="https://github.com/AV1004" target="_blank">
+                <FaGithub size={30} color="white" />
+              </a>
+              <a href="mailto:valay104@gmail.com" target="_blank">
+                <MdOutlineEmail size={30} color="white" />
+              </a>
+            </div>
             <button
-              className="bg-[#FF6F3C] text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 "
+              className="bg-[#FF6F3C] text-white py-4 px-8 rounded-lg font-bold text-lg mt-10"
               disabled={state.submitting}
             >
               Submit

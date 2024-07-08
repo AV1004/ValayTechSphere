@@ -1,4 +1,6 @@
 import React from "react";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 export const Menu = ({ onSectionChange, menuOpened, setMenuOpened }) => {
   return (
@@ -32,6 +34,20 @@ export const Menu = ({ onSectionChange, menuOpened, setMenuOpened }) => {
           <MenuButton label="Skills" onClick={() => onSectionChange(1)} />
           <MenuButton label="Projects" onClick={() => onSectionChange(2)} />
           <MenuButton label="Contact" onClick={() => onSectionChange(3)} />
+          <div className="flex gap-7">
+            <a
+              href="https://www.linkedin.com/in/valay-andhariya-753104248/"
+              target="_blank"
+            >
+              <FaLinkedin size={30} />
+            </a>
+            <a href="https://github.com/AV1004" target="_blank">
+              <FaGithub size={30} />
+            </a>
+            <a href="mailto:valay104@gmail.com" target="_blank">
+              <MdOutlineEmail size={30} />
+            </a>
+          </div>
         </div>
       </div>
     </>
