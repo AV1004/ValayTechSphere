@@ -5,6 +5,7 @@ import { currentProjectAtom, projects } from "./Projects";
 import { useForm, ValidationError } from "@formspree/react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
+import { TbFileCv } from "react-icons/tb";
 
 const Section = (props) => {
   const { children, mobileTop } = props;
@@ -315,6 +316,9 @@ const ContactSection = () => {
               </a>
               <a href="mailto:valay104@gmail.com" target="_blank">
                 <MdOutlineEmail size={30} color="white" />
+              </a>
+              <a href="/Valay_Andhariya_Resume.pdf" target="_blank">
+                <TbFileCv size={30} color="white" />
               </a>
             </div>
             <button

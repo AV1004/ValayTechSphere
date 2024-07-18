@@ -45,10 +45,11 @@ export const projects = [
     description: "Developed a dummy UPI banking Web App.",
   },
   {
-    title: "Urban Utopia",
-    url: "https://uraban-utopia.onrender.com/",
-    image: "projects/urbanUtopia.png",
-    description: "An Ecommerce Website bulid by NodeJS.",
+    title: "EcomSphere",
+    url: "https://ecom-sphere.vercel.app/",
+    image: "projects/econsphere.png",
+    description:
+      "Bulid a 3D Ecommerce WebApp using MERN stack and React Three Fiber.",
   },
   {
     title: "React Events",
@@ -67,6 +68,12 @@ export const projects = [
     url: "https://cherry-fields-explorer.vercel.app/",
     image: "projects/metaverse.jpg",
     description: "3D Metaverse Web App",
+  },
+  {
+    title: "Urban Utopia",
+    url: "https://uraban-utopia.onrender.com/",
+    image: "projects/urbanUtopia.png",
+    description: "An Ecommerce Website bulid by NodeJS.",
   },
   {
     title: "Solar System",

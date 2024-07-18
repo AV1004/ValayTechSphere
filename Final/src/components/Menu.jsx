@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
+import { TbFileCv } from "react-icons/tb";
 
 export const Menu = ({ onSectionChange, menuOpened, setMenuOpened }) => {
   return (
@@ -46,6 +47,9 @@ export const Menu = ({ onSectionChange, menuOpened, setMenuOpened }) => {
             </a>
             <a href="mailto:valay104@gmail.com" target="_blank">
               <MdOutlineEmail size={30} />
+            </a>
+            <a href="/Valay_Andhariya_Resume.pdf" target="_blank">
+              <TbFileCv size={30} />
             </a>
           </div>
         </div>
