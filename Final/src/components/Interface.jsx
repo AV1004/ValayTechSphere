@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
@@ -79,42 +78,15 @@ const AboutSection = ({ onSectionChange }) => {
 };
 
 const skills = [
-  {
-    title: "Javascript",
-    level: 90,
-  },
-  {
-    title: "React",
-    level: 80,
-  },
-  {
-    title: "Node",
-    level: 80,
-  },
-  {
-    title: "Express",
-    level: 75,
-  },
-  {
-    title: "MongoDB",
-    level: 60,
-  },
-  {
-    title: "Typescript",
-    level: 10,
-  },
-  {
-    title: "React Three Fiber",
-    level: 40,
-  },
-  {
-    title: "c++",
-    level: 50,
-  },
-  {
-    title: "Git/Github",
-    level: 60,
-  },
+  { title: "JavaScript", level: 95 },
+  { title: "React", level: 90 },
+  { title: "Node.js", level: 90 },
+  { title: "Express.js", level: 85 },
+  { title: "MongoDB / Postgre SQL", level: 75 },
+  { title: "TypeScript", level: 70 },
+  { title: "React Three Fiber", level: 50 },
+  { title: "Git/GitHub", level: 80 },
+  { title: "AWS", level: 80 },
 ];
 
 // const Languages = [
